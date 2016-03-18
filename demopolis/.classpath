@@ -5,7 +5,7 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/EtherGL"/>
 	<classpathentry kind="lib" path="lib/json/javax.json-1.0.4.jar" sourcepath="lib/json/javax.json-1.0.4-sources.jar">
 		<attributes>
-			<attribute name="javadoc_location" value="jar:platform:/resource/Demopolis/lib/json/javax.json-1.0.4-javadoc.jar!/"/>
+			<attribute name="javadoc_location" value="jar:platform:/resource/demopolis/lib/json/javax.json-1.0.4-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
