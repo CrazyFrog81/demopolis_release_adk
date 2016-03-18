@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="javax.json-1.0.4.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/lib/json/javax.json-1.0.4-sources.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/../../git/demopolis/demopolis/lib/json/javax.json-1.0.4-sources.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../../git/demopolis/demopolis/lib/json/javax.json-1.0.4.jar!/"/>
+		<relative-module-javadoc project-related="jar://$PROJECT_DIR$/../../git/demopolis/demopolis/lib/json/javax.json-1.0.4-javadoc.jar!/"/>
+	</lib>
+</component>

@@ -1,0 +1,15 @@
+# created with CityEngine 2015.2.2106 0928R (based on Esri Procedural Runtime 1.4.2074, build date: 2015-09-27 18:08)
+# creation date: Wed Feb 10 14:04:03 2016
+
+# mesh 'face_from_component_split_27' from geometry 'face_from_component_split_27'
+v 253.833 0.000 -603.145
+v 395.321 0.000 -527.448
+v 401.239 0.000 -535.053
+v 257.310 0.000 -610.722
+# 4 vertices
+
+g face_from_component_split_27
+s off
+f 1 2 3 4
+# 1 face
+
