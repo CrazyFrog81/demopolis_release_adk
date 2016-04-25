@@ -68,19 +68,6 @@ public final class Materials {
 		sidewalkMaterial.setDiffuse(RGB.mix(I3DColors.FADED, I3DColors.SIDEWALK, factor));
 	}
 
-//	public void fade(float factor) {
-//		groundMaterial.setDiffuse(I3DColors.GROUND.scaleRGB(factor));	
-//		waterMaterial.setDiffuse(I3DColors.WATER.scaleRGB(factor));
-//		blockMaterial.setDiffuse(I3DColors.BLOCK.scaleRGB(factor));
-//		greenMaterial.setDiffuse(I3DColors.GREEN.scaleRGB(factor));
-//		buildingMaterial.setDiffuse(I3DColors.BUILDING.scaleRGB(factor));
-//		trainMaterial.setDiffuse(I3DColors.TRAIN.scaleRGB(factor));
-//
-//		shrubMaterial.setDiffuse(I3DColors.SHRUB.scaleRGB(factor));
-//		treeMaterial.setDiffuse(I3DColors.TREE.scaleRGB(factor));
-//		trunkMaterial.setDiffuse(I3DColors.TRUNK.scaleRGB(factor));
-//	}
-	
 	public PolisMaterial getFinalMaterial(IDesignEntity e) {
 		switch (e.getType()) {
 		case BLOCK:

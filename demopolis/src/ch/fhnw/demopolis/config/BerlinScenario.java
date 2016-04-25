@@ -273,32 +273,138 @@ public final class BerlinScenario implements IScenario {
 	@Override
 	public List<Vec3> getIntroCameraVertices() {
 		if (alexanderplatzOnly)
-			return Arrays.asList(INTRO_AP);
+			return Arrays.asList(INTRO_V1);
 		else
-			return Arrays.asList(INTRO_AP_RF);
-		//return generatePath(20, 100.0f, 100.0f);
+			return Arrays.asList(INTRO_V1);
+		//return generatePath(40, -200.0f, 200.0f, 100.0f);
 	}
 	
 	@Override
 	public List<Vec3> getLoopCameraVertices() {
 		if (alexanderplatzOnly)
-			return Arrays.asList(LOOP_AP);
+			return Arrays.asList(LOOP_AP_V1);
 		else
-			return Arrays.asList(LOOP_AP_RF);
-		//return generatePath(40, -100.0f, 100.0f);
+			return Arrays.asList(LOOP_AP_RF_V1);
+		//return generatePath(40, -200.0f, 200.0f, 100.0f);
 	}
 	
-//	private List<Vec3> generatePath(int n, float x, float z) {
-//		List<Vec3> path = new ArrayList<>();
-//		float by = getBounds().getExtentY();
-//		float dy = by / n;
-//		float y = -by / 2;
-//		for (int i = 0; i < n; ++i, y += dy)
-//			path.add(new Vec3(x, y, z));
-//		return path;
-//	}
+	@SuppressWarnings("unused")
+	private List<Vec3> generatePath(int n, float x0, float x1, float z) {
+		List<Vec3> path = new ArrayList<>();
+		float delta = (x1 - x0) / n;
+		float x = x0;
+		for (int i = 0; i < n; ++i, x += delta)
+			path.add(new Vec3(x, x, z));
+		return path;
+	}
 	
-	private static final Vec3[] INTRO_AP_RF = new Vec3[] {
+	private static final Vec3[] INTRO_V1 = new Vec3[] {
+			// intro
+			new Vec3(-1200.0, -1200.0, 200.0),
+			new Vec3(-1040.0, -1040.0, 200.0),
+			new Vec3(-880.0, -880.0, 200.0),
+			new Vec3(-720.0, -720.0, 200.0),
+			new Vec3(-560.0, -560.0, 200.0),
+			new Vec3(-400.0, -400.0, 200.0),
+			new Vec3(-240.0, -240.0, 200.0),
+			new Vec3(-80.0, -80.0, 200.0),
+			new Vec3(80.0, 80.0, 200.0),
+			new Vec3(240.0, 240.0, 200.0),
+			new Vec3(493.36746, 467.88876, 200.0),
+			new Vec3(867.09937, 695.69257, 200.0),
+			new Vec3(1626.22, 1090.26, 150.0),
+			new Vec3(1140.4432, 1146.7141, 100.0),
+			new Vec3(802.13116, 960.58325, 50.0),
+			new Vec3(629.64246, 798.37146, 20.0),
+			new Vec3(532.41113, 675.93604, 10.0),
+			new Vec3(466.70566, 590.3576, 5.0),
+			new Vec3(409.6342, 514.03174, 5.0),
+			new Vec3(355.4573, 438.89584, 5.0),
+	};
+	
+	private static final Vec3[] LOOP_AP_V1 = new Vec3[] {
+			// loop
+			new Vec3(409.6342, 514.03174, 5.0),
+			new Vec3(355.4573, 438.89584, 5.0),
+			new Vec3(317.29266, 392.75934, 5.0),
+			new Vec3(285.8589, 369.41446, 10.0),
+			new Vec3(240.77321, 380.53854, 15.0),
+			new Vec3(192.27602, 393.85553, 20.0),
+			new Vec3(148.96786, 385.67245, 25.0),
+			new Vec3(112.099075, 312.86694, 30.0),
+			new Vec3(108.95508, 258.26532, 35.0),
+			new Vec3(166.3787, 203.67592, 40.0),
+			new Vec3(228.83636, 151.64252, 40.0),
+			new Vec3(281.37476, 99.004845, 40.0),
+			new Vec3(340.2002, 34.510124, 35.0),
+			new Vec3(420.20673, -47.502174, 30.0),
+			new Vec3(501.4965, -152.04466, 25.0),
+			new Vec3(544.3222, -287.32724, 20.0),
+			new Vec3(628.7148, -342.44525, 15.0),
+			new Vec3(698.53284, -306.89505, 10.0),
+			new Vec3(696.53906, -208.09224, 5.0),
+			new Vec3(642.8654, -99.75185, 5.0),
+			new Vec3(556.3108, 24.862408, 5.0),
+			new Vec3(549.669, 83.0433, 5.0),
+			new Vec3(599.49084, 163.98518, 5.0),
+			new Vec3(666.31036, 247.81941, 5.0),
+			new Vec3(743.2641, 340.3844, 5.0),
+			new Vec3(763.5797, 410.12613, 5.0),
+			new Vec3(710.03107, 466.7896, 5.0),
+			new Vec3(614.2683, 527.2068, 5.0),
+			new Vec3(535.38586, 578.5085, 5.0),
+			new Vec3(487.19922, 601.7118, 5.0),
+			new Vec3(448.80707, 575.38544, 5.0),
+	};
+
+	private static final Vec3[] LOOP_AP_RF_V1 = new Vec3[] {
+			// loop
+			new Vec3(409.6342, 514.03174, 5.0),
+			new Vec3(355.4573, 438.89584, 5.0),
+			new Vec3(317.29266, 392.75934, 5.0),
+			new Vec3(277.0665, 345.7264, 5.0),
+			new Vec3(234.94186, 299.32367, 5.0),
+			new Vec3(193.04176, 255.09348, 5.0),
+			new Vec3(130.45024, 196.80164, 5.0),
+			new Vec3(67.16792, 149.34465, 5.0),
+			new Vec3(10.665163, 105.64732, 5.0),
+			new Vec3(-54.36697, 53.027332, 5.0),
+			new Vec3(-113.71876, 5.6905084, 5.0),
+			new Vec3(-166.74199, -36.89239, 5.0),
+			new Vec3(-212.25407, -69.65407, 5.0),
+			new Vec3(-267.2021, -110.55401, 5.0),
+			new Vec3(-316.7204, -156.39178, 5.0),
+			new Vec3(-324.62216, -206.63, 10.0),
+			new Vec3(-294.13586, -273.5521, 15.0),
+			new Vec3(-260.8731, -334.48956, 20.0),
+			new Vec3(-219.551, -400.7964, 25.0),
+			new Vec3(-169.5753, -471.7089, 30.0),
+			new Vec3(-105.147316, -542.89056, 35.0),
+			new Vec3(-21.779835, -565.93335, 40.0),
+			new Vec3(48.826145, -491.10144, 40.0),
+			new Vec3(94.77945, -393.581, 40.0),
+			new Vec3(67.89926, -314.7067, 40.0),
+			new Vec3(9.200182, -253.63564, 40.0),
+			new Vec3(8.610334, -209.85616, 40.0),
+			new Vec3(71.17022, -157.58075, 40.0),
+			new Vec3(157.13065, -94.73383, 40.0),
+			new Vec3(248.62645, -26.171307, 35.0),
+			new Vec3(365.0304, 70.293655, 30.0),
+			new Vec3(451.59625, 155.54239, 25.0),
+			new Vec3(537.0101, 246.38788, 20.0),
+			new Vec3(614.5287, 350.36176, 15.0),
+			new Vec3(684.8281, 435.5135, 10.0),
+			new Vec3(689.4689, 473.8651, 5.0),
+			new Vec3(614.2683, 527.2068, 5.0),
+			new Vec3(535.38586, 578.5085, 5.0),
+			new Vec3(487.19922, 601.7118, 5.0),
+			new Vec3(448.80707, 575.38544, 5.0),
+	};
+	
+	// ORIGINAL BERLIN ADK LOOPS
+
+	@SuppressWarnings("unused")
+	private static final Vec3[] INTRO_AP_RF_V0 = new Vec3[] {
 			// intro
 			new Vec3(1213.7112, -992.38806, 20.0),
 			new Vec3(1072.3823, -844.57556, 20.0),
@@ -322,7 +428,8 @@ public final class BerlinScenario implements IScenario {
 			new Vec3(-144.12778, -309.01672, 160.0),
 	};
 	
-	private static final Vec3[] LOOP_AP_RF = new Vec3[] {
+	@SuppressWarnings("unused")
+	private static final Vec3[] LOOP_AP_RF_V0 = new Vec3[] {
 			// loop
 			new Vec3(-234.99292, -366.76123, 160.0),
 			new Vec3(-144.12778, -309.01672, 160.0),
@@ -366,7 +473,8 @@ public final class BerlinScenario implements IScenario {
 			new Vec3(-348.45758, -420.30765, 160.0),
 	};
 	
-	private static final Vec3[] INTRO_AP = new Vec3[] {
+	@SuppressWarnings("unused")
+	private static final Vec3[] INTRO_AP_V0 = new Vec3[] {
 			// intro
 			new Vec3(-1188.6715, 325.7528, 20.0),
 			new Vec3(-1089.8418, 266.87613, 20.0),
@@ -390,7 +498,8 @@ public final class BerlinScenario implements IScenario {
 			new Vec3(666.5735, 26.274923, 150.0),
 	};
 	
-	private static final Vec3[] LOOP_AP = new Vec3[] {
+	@SuppressWarnings("unused")
+	private static final Vec3[] LOOP_AP_V0 = new Vec3[] {
 			// loop
 			new Vec3(599.3202, -32.38195, 150.0),
 			new Vec3(666.5735, 26.274923, 150.0),
